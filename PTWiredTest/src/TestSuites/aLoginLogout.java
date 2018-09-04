@@ -1,4 +1,4 @@
-package Login;
+package TestSuites;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 
-public class loginTest1 {
+public class aLoginLogout {
 
 	
 	WebDriver driver;
@@ -105,6 +105,10 @@ public class loginTest1 {
 	public void dLoginButton() throws IOException
 	
 	{
+		WebDriverWait wait=new WebDriverWait(driver,40);
+		WebElement element=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[3]/button"))));
+		
+		
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[3]/button")).isEnabled());
 		
 		Reporter.log("----------------Asserted--Login button is enabled------------------");
@@ -113,10 +117,11 @@ public class loginTest1 {
 		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[3]/button")).click();
 		
-		 WebDriverWait wait = new WebDriverWait(driver,40);
+		 WebDriverWait wait1 = new WebDriverWait(driver,40);
 		 
-		 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
+		 WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
 		 
+		Reporter.log("--------------------------------------Log in is successful--------------------------");
 		
 		 //Take snapshot
 		 File source1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -132,6 +137,59 @@ public class loginTest1 {
 	}
 	
 	
+	@Test(priority=5,dependsOnMethods="dLoginButton",description="This test is to verify if user can successfully Logout")
+	
+	public void eLogout() throws IOException
+	{
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		WebDriverWait wait = new WebDriverWait(driver,40);
+		WebElement element=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]"))));
+		
+		
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).isEnabled());
+		
+		Reporter.log("-------------Assert: User's name is available in homescreen to click--------------------------");
+		
+		driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
+		
+		 //Take snapshot
+		 File source11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\03"+driver.getTitle()+".png");
+
+		 FileUtils.copyFile(source11, screenshotName11);
+
+
+		 Reporter.log("<br><img src='"+screenshotName11+"' height='400' width='850'/><br>");
+		
+		 //Logout
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+		
+		WebDriverWait wait1=new WebDriverWait(driver,40);
+		WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
+		
+				
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4")).isDisplayed());
+		
+		Reporter.log("---------------------Asserted:--Log out is successful---------------------------------");
+		
+		//Take snapshot
+		 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\04"+driver.getTitle()+".png");
+
+		 FileUtils.copyFile(source111, screenshotName111);
+
+
+		 Reporter.log("<br><img src='"+screenshotName111+"' height='400' width='850'/><br>");
+		
+		
+	}
 	
 	
 	
