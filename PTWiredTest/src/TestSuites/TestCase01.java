@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 
-public class aLoginLogout {
+public class TestCase01 {
 
 	
 	WebDriver driver;
@@ -84,7 +84,7 @@ public class aLoginLogout {
 		 
 		 //Send values to password field
 		 
-		 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[2]/input")).sendKeys("Password123");
+		 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[2]/input")).sendKeys("Password234");
 		 
 		 
 		 //Take snapshot
@@ -188,6 +188,9 @@ public class aLoginLogout {
 
 		 Reporter.log("<br><img src='"+screenshotName111+"' height='400' width='850'/><br>");
 		
+		 driver.quit();
+		 
+		 
 		
 	}
 	

@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestSuites.aLoginTest1">
+      <class name="TestSuites.cAddNewPatient">
         <methods>
-          <include name="bEmailInputField"/>
-          <include name="cPasswordInputField"/>
+          <include name="cAddNewPatient"/>
+          <include name="bLogin"/>
           <include name="aStartBrowser"/>
-          <include name="dLoginButton"/>
-          <include name="eLogout"/>
         </methods>
-      </class> <!-- TestSuites.aLoginTest1 -->
+      </class> <!-- TestSuites.cAddNewPatient -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
