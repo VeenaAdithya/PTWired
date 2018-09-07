@@ -1,4 +1,4 @@
-package TestSuites;
+package TestSuite01;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -142,7 +142,7 @@ public class TestCase01 {
 	public void eLogout() throws IOException
 	{
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

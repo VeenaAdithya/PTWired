@@ -1,4 +1,4 @@
-package TestSuites;
+package TestSuite01;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,6 +69,7 @@ public class TestCase02 {
 		 
 		 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
 		
+		 Reporter.log("---------------------Login is successful--------------------");
 	}
 	
 	 @Test(priority=8,dependsOnMethods="bLogin",description="This test is to verify password reset in users profile page works")

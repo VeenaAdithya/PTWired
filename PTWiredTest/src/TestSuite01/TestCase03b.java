@@ -1,9 +1,12 @@
-package TestSuites;
+package TestSuite01;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -22,7 +25,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class TestCase03 {
+public class TestCase03b {
 
 
 		WebDriver driver;
@@ -95,7 +98,7 @@ public class TestCase03 {
 			 String DateOfBirth;
 			 String Email;
 			 
-			 File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\PTWired\\AddNewPatient.xlsx");
+			 File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\PTWired\\TestSuite01\\TestCase03.xlsx");
 			 
 			 FileInputStream fis=new FileInputStream(src);
 			 
@@ -138,9 +141,9 @@ public class TestCase03 {
 			 
 			 WebElement element111 = wait111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[1]")));
 			
-			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[1]")).isEnabled());
+			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[2]")).isEnabled());
 			 
-			 Reporter.log("-----------------------------Asserted:--Save and Add Prescription button is enabled--------------------------");
+			 Reporter.log("-----------------------------Asserted:--Save button is enabled--------------------------");
 			 
 			 
 			 //Take snapshot
@@ -153,13 +156,97 @@ public class TestCase03 {
 
 			 Reporter.log("<br><img src='"+screenshotName11+"' height='400' width='850'/><br>");
 
+			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[2]")).click();
 			 
+
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+				Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[1]")).isEnabled());
+				 
+				 Reporter.log("-----------------------------Asserted:--Save and Add Prescription button is enabled--------------------------");
+				 
 			 
-			//driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[2]")).click();
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[1]")).click();
 			 
+			try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+			 //Take snapshot
+			 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+			 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatient\\02"+driver.getTitle()+".png");
+
+			 FileUtils.copyFile(source111, screenshotName111);
+
+			 Reporter.log("<br><img src='"+screenshotName111+"' height='400' width='850'/><br>");
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
 			 
+			 WebElement element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/div/div"));
+			 Reporter.log(element.getText());
 			 
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			List<WebElement> links=driver.findElements(By.tagName("a"));
+			
+			System.out.println("Total links are "+links.size());
+			
+			for(int i=0;i<links.size();i++)
+			{
+				
+				WebElement ele= links.get(i);
+				
+				String url=ele.getAttribute("href");
+				
+				verifyLinkActive(url);
+				
+			}
+		 
 		 }
 		 
+		 public static void verifyLinkActive(String linkUrl)
+			{
+		        try 
+		        {
+		           URL url = new URL(linkUrl);
+		           
+		           HttpURLConnection httpURLConnect=(HttpURLConnection)url.openConnection();
+		           
+		           httpURLConnect.setConnectTimeout(5000);
+		           
+		           httpURLConnect.connect();
+		           
+		           if(httpURLConnect.getResponseCode()==200)
+		           {
+		               Reporter.log(linkUrl+" - "+httpURLConnect.getResponseMessage());
+		            }
+		          if(httpURLConnect.getResponseCode()==HttpURLConnection.HTTP_NOT_FOUND)  
+		           {
+		               Reporter.log(linkUrl+" - "+httpURLConnect.getResponseMessage() + " - "+ HttpURLConnection.HTTP_NOT_FOUND);
+		            }
+		        } catch (Exception e) {
+		           
+		        }
+		    } 
 		 
 }

@@ -3,9 +3,9 @@
 <suite name="Suite1" verbose="1" >
   <test name="RegressionTest1" >
     <classes>
-       <class name="TestSuites.TestCase01" />
-       <class name="TestSuites.TestCase02" />
-       <class name="TestSuites.TestCase03" />
+       <class name="TestSuite01.TestCase01" />
+       <class name="TestSuite01.TestCase02" />
+       <class name="TestSuite01.TestCase03" />
     </classes>
   </test>
 </suite>

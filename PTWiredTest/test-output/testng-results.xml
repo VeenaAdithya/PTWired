@@ -1,57 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[---------------------Browser has started----------------]]>
-    </line>
-    <line>
-      <![CDATA[-----------------Asserted--Email field in login page is enabled----------------------]]>
-    </line>
-    <line>
-      <![CDATA[----------------Asserted--Password field in login page is enabled-----------------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\01PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[----------------Asserted--Login button is enabled------------------]]>
-    </line>
-    <line>
-      <![CDATA[--------------------------------------Log in is successful--------------------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\02PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[-------------Assert: User's name is available in homescreen to click--------------------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\03PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[---------------------Asserted:--Log out is successful---------------------------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\04PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[---------------------Browser has started----------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\03PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\04PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[-------------------------Asserted:-Change Password link is available-----------------------------]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\05PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[-------------------------Asserted:-Password change 'Submit' button is available-----------------------------]]>
-    </line>
     <line>
       <![CDATA[---------------------Browser has started----------------]]>
     </line>
@@ -59,133 +8,90 @@
       <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
     </line>
     <line>
-      <![CDATA[-----------------------------Asserted:--Save and Add Prescription button is enabled--------------------------]]>
+      <![CDATA[-------------Error message displayed is +actualerror_message]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\AddNewPatient\01PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[-----------------------Error message is displayed correctly for first name field when left blank------------------------]]>
+    </line>
+    <line>
+      <![CDATA[-------------Error message displayed is---Highlighted fields are invalid]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Error message is displayed correctly for last name field when left blank------------------------]]>
+    </line>
+    <line>
+      <![CDATA[-------------Error message displayed is -----Highlighted fields are invalid]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Error message is displayed correctly for Date of Birth field when left blank------------------------]]>
+    </line>
+    <line>
+      <![CDATA[-------------Error message displayed is-------Highlighted fields are invalid]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Error message is displayed correctly for Email field when left blank------------------------]]>
+    </line>
+    <line>
+      <![CDATA[-------------Error message displayed is---------Invalid Email]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Error message is displayed correctly when email field is incorrectly populated------------------------]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-09-05T12:36:43Z" name="Suite1" finished-at="2018-09-05T12:37:41Z" duration-ms="58535">
+  <suite started-at="2018-09-07T07:54:31Z" name="Default suite" finished-at="2018-09-07T07:55:00Z" duration-ms="29166">
     <groups>
     </groups>
-    <test started-at="2018-09-05T12:36:43Z" name="RegressionTest1" finished-at="2018-09-05T12:37:41Z" duration-ms="58535">
-      <class name="TestSuites.TestCase02">
-        <test-method signature="aStartBrowser()[pri:6, instance:TestSuites.TestCase02@16610890]" started-at="2018-09-05T12:37:06Z" name="aStartBrowser" finished-at="2018-09-05T12:37:08Z" duration-ms="2089" status="PASS">
+    <test started-at="2018-09-07T07:54:31Z" name="Default test" finished-at="2018-09-07T07:55:00Z" duration-ms="29166">
+      <class name="TestSuite01.TestCase03a">
+        <test-method signature="aStartBrowser()[pri:10, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:31Z" name="aStartBrowser" finished-at="2018-09-07T07:54:34Z" duration-ms="2925" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[---------------------Browser has started----------------]]>
             </line>
           </reporter-output>
         </test-method> <!-- aStartBrowser -->
-        <test-method signature="bLogin()[pri:7, instance:TestSuites.TestCase02@16610890]" started-at="2018-09-05T12:37:08Z" name="bLogin" description="This test is to verify if Login page accepts username" finished-at="2018-09-05T12:37:19Z" depends-on-methods="TestSuites.TestCase02.aStartBrowser" duration-ms="11555" status="PASS">
+        <test-method signature="bLogin()[pri:11, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:34Z" name="bLogin" description="This test is to verify if Login page accepts username" finished-at="2018-09-07T07:54:44Z" depends-on-methods="TestSuite01.TestCase03a.aStartBrowser" duration-ms="10234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bLogin -->
-        <test-method signature="cMyProfilePage()[pri:8, instance:TestSuites.TestCase02@16610890]" started-at="2018-09-05T12:37:19Z" name="cMyProfilePage" description="This test is to verify password reset in users profile page works" finished-at="2018-09-05T12:37:20Z" depends-on-methods="TestSuites.TestCase02.bLogin" duration-ms="999" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\03PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\04PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[-------------------------Asserted:-Change Password link is available-----------------------------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- cMyProfilePage -->
-        <test-method signature="dChangePassword()[pri:9, instance:TestSuites.TestCase02@16610890]" started-at="2018-09-05T12:37:20Z" name="dChangePassword" description="This test is to verify if user can set new password" finished-at="2018-09-05T12:37:23Z" depends-on-methods="TestSuites.TestCase02.cMyProfilePage" duration-ms="2189" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\ChangePassword1\05PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[-------------------------Asserted:-Password change 'Submit' button is available-----------------------------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- dChangePassword -->
-      </class> <!-- TestSuites.TestCase02 -->
-      <class name="TestSuites.TestCase01">
-        <test-method signature="aStartBrowser()[pri:1, instance:TestSuites.TestCase01@fba92d3]" started-at="2018-09-05T12:36:43Z" name="aStartBrowser" finished-at="2018-09-05T12:36:46Z" duration-ms="2956" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[---------------------Browser has started----------------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- aStartBrowser -->
-        <test-method signature="bEmailInputField()[pri:2, instance:TestSuites.TestCase01@fba92d3]" started-at="2018-09-05T12:36:46Z" name="bEmailInputField" description="This test is to verify if Login page accepts username" finished-at="2018-09-05T12:36:55Z" depends-on-methods="TestSuites.TestCase01.aStartBrowser" duration-ms="9691" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[-----------------Asserted--Email field in login page is enabled----------------------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bEmailInputField -->
-        <test-method signature="cPasswordInputField()[pri:3, instance:TestSuites.TestCase01@fba92d3]" started-at="2018-09-05T12:36:55Z" name="cPasswordInputField" description="This test is to verify if Login page accepts password" finished-at="2018-09-05T12:36:56Z" depends-on-methods="TestSuites.TestCase01.bEmailInputField" duration-ms="713" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[----------------Asserted--Password field in login page is enabled-----------------------]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\01PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- cPasswordInputField -->
-        <test-method signature="dLoginButton()[pri:4, instance:TestSuites.TestCase01@fba92d3]" started-at="2018-09-05T12:36:56Z" name="dLoginButton" description="This test is to verify if Login button in Login page is enabled" finished-at="2018-09-05T12:36:59Z" depends-on-methods="TestSuites.TestCase01.cPasswordInputField" duration-ms="2519" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[----------------Asserted--Login button is enabled------------------]]>
-            </line>
-            <line>
-              <![CDATA[--------------------------------------Log in is successful--------------------------]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\02PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- dLoginButton -->
-        <test-method signature="eLogout()[pri:5, instance:TestSuites.TestCase01@fba92d3]" started-at="2018-09-05T12:36:59Z" name="eLogout" description="This test is to verify if user can successfully Logout" finished-at="2018-09-05T12:37:06Z" depends-on-methods="TestSuites.TestCase01.dLoginButton" duration-ms="7208" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[-------------Assert: User's name is available in homescreen to click--------------------------]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\03PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[---------------------Asserted:--Log out is successful---------------------------------]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\loginTest1\04PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- eLogout -->
-      </class> <!-- TestSuites.TestCase01 -->
-      <class name="TestSuites.TestCase03">
-        <test-method signature="aStartBrowser()[pri:10, instance:TestSuites.TestCase03@4d465b11]" started-at="2018-09-05T12:37:23Z" name="aStartBrowser" finished-at="2018-09-05T12:37:25Z" duration-ms="2060" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[---------------------Browser has started----------------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- aStartBrowser -->
-        <test-method signature="bLogin()[pri:11, instance:TestSuites.TestCase03@4d465b11]" started-at="2018-09-05T12:37:25Z" name="bLogin" description="This test is to verify if Login page accepts username" finished-at="2018-09-05T12:37:34Z" depends-on-methods="TestSuites.TestCase03.aStartBrowser" duration-ms="9205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bLogin -->
-        <test-method signature="cAddNewPatient()[pri:12, instance:TestSuites.TestCase03@4d465b11]" started-at="2018-09-05T12:37:34Z" name="cAddNewPatient" description="This test is to add new patient" finished-at="2018-09-05T12:37:41Z" depends-on-methods="TestSuites.TestCase03.bLogin" duration-ms="7309" status="PASS">
+        <test-method signature="cAddNewPatient()[pri:12, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:44Z" name="cAddNewPatient" description="This test is to add new patient" finished-at="2018-09-07T07:55:00Z" depends-on-methods="TestSuite01.TestCase03a.bLogin" duration-ms="15976" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
             </line>
             <line>
-              <![CDATA[-----------------------------Asserted:--Save and Add Prescription button is enabled--------------------------]]>
+              <![CDATA[-------------Error message displayed is +actualerror_message]]>
             </line>
             <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\AddNewPatient\01PTWired.png' height='400' width='850'/><br>]]>
+              <![CDATA[-----------------------Error message is displayed correctly for first name field when left blank------------------------]]>
+            </line>
+            <line>
+              <![CDATA[-------------Error message displayed is---Highlighted fields are invalid]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------Error message is displayed correctly for last name field when left blank------------------------]]>
+            </line>
+            <line>
+              <![CDATA[-------------Error message displayed is -----Highlighted fields are invalid]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------Error message is displayed correctly for Date of Birth field when left blank------------------------]]>
+            </line>
+            <line>
+              <![CDATA[-------------Error message displayed is-------Highlighted fields are invalid]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------Error message is displayed correctly for Email field when left blank------------------------]]>
+            </line>
+            <line>
+              <![CDATA[-------------Error message displayed is---------Invalid Email]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------Error message is displayed correctly when email field is incorrectly populated------------------------]]>
             </line>
           </reporter-output>
         </test-method> <!-- cAddNewPatient -->
-      </class> <!-- TestSuites.TestCase03 -->
-    </test> <!-- RegressionTest1 -->
-  </suite> <!-- Suite1 -->
+      </class> <!-- TestSuite01.TestCase03a -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
