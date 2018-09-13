@@ -98,28 +98,46 @@ public class TestCase03a {
 			 
 			 Reporter.log("-----------------------Asserted:--Add New Patient button is available in home page----------------");
 			 
+			 Reporter.log("                                                                                  ");
+			 Reporter.log("                                                                                  ");
+			 Reporter.log("=====================================================================");
+			 
 			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")).click();
 			
 			 WebDriverWait wait111 = new WebDriverWait(driver,40);
 			 
 			 WebElement element111 = wait111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")));
 			
+
+			 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			
 			 
 			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).click();
 			
 			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).click();
 			 
-			
+			Reporter.log("----------------Test when First Name field is left blank-------------------");
+			Reporter.log("                                                                                  ");
 			String actualerror_message=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/span[2]")).getAttribute("innerHTML");
 			
 			String expectederror_message="Highlighted fields are invalid";
 			
-			Reporter.log("-------------Error message displayed is +actualerror_message");
-			
+			Reporter.log("-------------Error message displayed is---------------" +actualerror_message);
+			Reporter.log("                                                                                  ");
 			Assert.assertEquals(actualerror_message, expectederror_message);
 			
-			Reporter.log("-----------------------Error message is displayed correctly for first name field when left blank------------------------");
+			Reporter.log("-------------------Asserted:----Error message is displayed correctly for first name field when left blank------------------------");
+			
+			Reporter.log("                                                                                  ");
+			Reporter.log("                                                                                  ");
+			
+			
+			Reporter.log("=====================================================================");
 			
 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).click();
 			
@@ -131,16 +149,23 @@ public class TestCase03a {
 					e.printStackTrace();
 				}
 			
+			 Reporter.log("----------------Test when Last Name field is left blank-------------------");
+			 Reporter.log("                                                                                  ");
 			String actualerror_message1=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/span[2]")).getAttribute("innerHTML");
 			
 			Reporter.log("-------------Error message displayed is---" +actualerror_message1);
+			Reporter.log("                                                                                  ");
 			
 			String expectederror_message1="Highlighted fields are invalid";
 			
 			Assert.assertEquals(actualerror_message1, expectederror_message1);
 			
-			Reporter.log("-----------------------Error message is displayed correctly for last name field when left blank------------------------");
+			Reporter.log("-----------Asserted:------Error message is displayed correctly for last name field when left blank------------------------");
 			
+			Reporter.log("                                                                                  ");
+			Reporter.log("                                                                                  ");
+			
+			Reporter.log("=====================================================================");
 			
 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).click();
 			
@@ -152,43 +177,69 @@ public class TestCase03a {
 					e.printStackTrace();
 				}
 			 
+			 Reporter.log("----------------Test when Date field is left blank-------------------");
+			 Reporter.log("                                                                                  ");
 			String actualerror_message11=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/span[2]")).getAttribute("innerHTML");
 			
 			Reporter.log("-------------Error message displayed is -----"+actualerror_message11);
+			Reporter.log("                                                                                  ");
 			
 			String expectederror_message11="Highlighted fields are invalid";
 			
 			Assert.assertEquals(actualerror_message11, expectederror_message11);
 			
-			Reporter.log("-----------------------Error message is displayed correctly for Date of Birth field when left blank------------------------");
+			Reporter.log("-------------------Asserted:--Error message is displayed correctly for Date of Birth field when left blank------------------------");
 		
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).click();
+			Reporter.log("                                                                                  ");
+			
+			Reporter.log("                                                                                  ");
+			
+			Reporter.log("=====================================================================");
+			
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).click();
 			 
 			 
-			 try {
+			 	try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			 
+			 	
+			 	Reporter.log("----------------Test when Email field is left blank-------------------");
+			 	Reporter.log("                                                                                  ");
 			 	String actualerror_message111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/span[2]")).getAttribute("innerHTML");
 			 	
 			 	Reporter.log("-------------Error message displayed is-------" +actualerror_message111);
-				
+			 	Reporter.log("                                                                                  ");
 			 	String expectederror_message111="Highlighted fields are invalid";
 				
 				Assert.assertEquals(actualerror_message111, expectederror_message111);
 				
-				Reporter.log("-----------------------Error message is displayed correctly for Email field when left blank------------------------");
-			 
-			 
+				Reporter.log("---------------Asserted:---Error message is displayed correctly for Email field when left blank------------------------");
+				Reporter.log("                                                                                  ");
+				Reporter.log("                                                                                  ");
+			
+				Reporter.log("=====================================================================");
+				
+				//Take snapshot
+				 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatientFail\\01"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source111, screenshotName111);
+
+				 Reporter.log("<br><img src='"+screenshotName111+"' height='400' width='850'/><br>");
+
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
+				Reporter.log("----------------Test when Email field is incorrectly populated-------------------");
+				Reporter.log("                                                                                  ");
 				
 				driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).sendKeys("dummyemail");
 				
@@ -205,13 +256,19 @@ public class TestCase03a {
 				 	String actualerror_message1111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/span[2]")).getAttribute("innerHTML");
 					
 				 	Reporter.log("-------------Error message displayed is---------"+actualerror_message1111);
-					
+				
+				 	Reporter.log("                                                                                  ");
+				 	
 				 	String expectederror_message1111="Invalid Email";
 					
 					Assert.assertEquals(actualerror_message1111, expectederror_message1111);
 					
-					Reporter.log("-----------------------Error message is displayed correctly when email field is incorrectly populated------------------------");
-							
+					Reporter.log("------------------Asserted:--Error message is displayed correctly when email field is incorrectly populated------------------------");
+					Reporter.log("                                                                                  ");
+					Reporter.log("                                                                                  ");
+				
+					Reporter.log("=====================================================================");
+					
 					 try {
 							Thread.sleep(2000);
 						} catch (InterruptedException e) {
@@ -219,7 +276,42 @@ public class TestCase03a {
 							e.printStackTrace();
 						}
 					
+
+					 Reporter.log("----------------Test when Date field is incorrectly populated-------------------"); 
+					 Reporter.log("                                                                                  ");
+					 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys("31-12-2001");
+					 
+					 try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					 
+					 	String actualerror_message11111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/span[2]")).getAttribute("innerHTML");
+						
+					 	Reporter.log("-------------Error message displayed is---------"+actualerror_message11111);
+					 	Reporter.log("                                                                                  ");
+					 	
+					 	String expectederror_message11111="Invalid date";
+						
+						Assert.assertEquals(actualerror_message11111, expectederror_message11111);
+						
+						Reporter.log("--------------Asserted:--Error message is displayed correctly when date field is incorrectly populated------------------------");
+						Reporter.log("                                                                                  ");
+						Reporter.log("                                                                                  ");
 					
+						Reporter.log("=====================================================================");
+						
+						//Take snapshot
+					 File source1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+					 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatientFail\\02"+driver.getTitle()+".png");
+
+					 FileUtils.copyFile(source1111, screenshotName1111);
+
+					 Reporter.log("<br><img src='"+screenshotName1111+"' height='400' width='850'/><br>");
+
 		 }
 		 
 		 

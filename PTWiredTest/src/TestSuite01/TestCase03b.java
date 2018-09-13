@@ -14,12 +14,14 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -79,7 +81,7 @@ public class TestCase03b {
 
 		 @Test(priority=12,dependsOnMethods="bLogin",description="This test is to add new patient")
 		 
-		 public void cAddNewPatient() throws IOException
+		 public void cAddNewPatienPass() throws IOException
 		 
 		 
 		 {
@@ -149,7 +151,7 @@ public class TestCase03b {
 			 //Take snapshot
 			 File source11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-			 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatient\\01"+driver.getTitle()+".png");
+			 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatienPass\\01"+driver.getTitle()+".png");
 
 			 FileUtils.copyFile(source11, screenshotName11);
 
@@ -180,10 +182,22 @@ public class TestCase03b {
 				e.printStackTrace();
 			}
 		
+			
+			 
+			 WebDriverWait wait1111 = new WebDriverWait(driver,40); 
+			 WebElement element1111 = wait1111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/button")));
+			
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
 			 //Take snapshot
 			 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-			 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatient\\02"+driver.getTitle()+".png");
+			 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatienPass\\02"+driver.getTitle()+".png");
 
 			 FileUtils.copyFile(source111, screenshotName111);
 
@@ -198,7 +212,11 @@ public class TestCase03b {
 		
 			 
 			 WebElement element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/div/div"));
-			 Reporter.log(element.getText());
+			 Reporter.log("------Patient Display after patient is added is--------" +element.getText());
+			 
+			 Reporter.log("                                                                   ");
+			 
+			 Reporter.log("==============================================");
 			 
 				try {
 					Thread.sleep(1000);
@@ -206,47 +224,65 @@ public class TestCase03b {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			 
-			List<WebElement> links=driver.findElements(By.tagName("a"));
-			
-			System.out.println("Total links are "+links.size());
-			
-			for(int i=0;i<links.size();i++)
-			{
-				
-				WebElement ele= links.get(i);
-				
-				String url=ele.getAttribute("href");
-				
-				verifyLinkActive(url);
-				
-			}
-		 
+			 		 
 		 }
 		 
-		 public static void verifyLinkActive(String linkUrl)
-			{
-		        try 
-		        {
-		           URL url = new URL(linkUrl);
-		           
-		           HttpURLConnection httpURLConnect=(HttpURLConnection)url.openConnection();
-		           
-		           httpURLConnect.setConnectTimeout(5000);
-		           
-		           httpURLConnect.connect();
-		           
-		           if(httpURLConnect.getResponseCode()==200)
-		           {
-		               Reporter.log(linkUrl+" - "+httpURLConnect.getResponseMessage());
-		            }
-		          if(httpURLConnect.getResponseCode()==HttpURLConnection.HTTP_NOT_FOUND)  
-		           {
-		               Reporter.log(linkUrl+" - "+httpURLConnect.getResponseMessage() + " - "+ HttpURLConnection.HTTP_NOT_FOUND);
-		            }
-		        } catch (Exception e) {
-		           
-		        }
-		    } 
+		 @Test
+		 public void Prescribe()
+		 
+		 {
+			 
+			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/button")).click();
+
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				 
+				 WebDriverWait wait1111 = new WebDriverWait(driver,40); 
+				 WebElement element1111 = wait1111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/input")));
+				  
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/input")).sendKeys("Spine");
+			 
+				 try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			
+				 WebDriverWait wait11111 = new WebDriverWait(driver,40); 
+				 WebElement element11111 = wait11111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")));
+			
+				 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")).isDisplayed());
+					  
+				 JavascriptExecutor js = (JavascriptExecutor) driver;
+				 js.executeScript("window.scrollBy(0,100)");
+				 
+				 
+				 try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 
+				 WebDriverWait wait111111 = new WebDriverWait(driver,40); 
+				 WebElement element111111 = wait111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")));
+			
+				 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")).isDisplayed());
+				 
+				 
+				 
+				 
+		 }
+		 
+		 
+		 
+		 
+		 
+		 
 		 
 }

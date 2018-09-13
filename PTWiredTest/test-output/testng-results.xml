@@ -1,97 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[---------------------Browser has started----------------]]>
+      <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
     </line>
     <line>
-      <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\01PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[-------------Error message displayed is +actualerror_message]]>
+      <![CDATA[-----------------------Options available in dropdown are-----------------]]>
     </line>
     <line>
-      <![CDATA[-----------------------Error message is displayed correctly for first name field when left blank------------------------]]>
+      <![CDATA[Head and Neck]]>
     </line>
     <line>
-      <![CDATA[-------------Error message displayed is---Highlighted fields are invalid]]>
+      <![CDATA[Lower Extremity]]>
     </line>
     <line>
-      <![CDATA[-----------------------Error message is displayed correctly for last name field when left blank------------------------]]>
+      <![CDATA[Trunk]]>
     </line>
     <line>
-      <![CDATA[-------------Error message displayed is -----Highlighted fields are invalid]]>
+      <![CDATA[Upper Extremity]]>
     </line>
     <line>
-      <![CDATA[-----------------------Error message is displayed correctly for Date of Birth field when left blank------------------------]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\02PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[-------------Error message displayed is-------Highlighted fields are invalid]]>
+      <![CDATA[-----------------------Options available within Head and Neck are-----------------]]>
     </line>
     <line>
-      <![CDATA[-----------------------Error message is displayed correctly for Email field when left blank------------------------]]>
+      <![CDATA[Cervical Spine]]>
     </line>
     <line>
-      <![CDATA[-------------Error message displayed is---------Invalid Email]]>
+      <![CDATA[Jaw]]>
     </line>
     <line>
-      <![CDATA[-----------------------Error message is displayed correctly when email field is incorrectly populated------------------------]]>
+      <![CDATA[Vestibular]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\03PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Options available within Cervical and Spine are-----------------]]>
+    </line>
+    <line>
+      <![CDATA[Cervical Spine Extensors]]>
+    </line>
+    <line>
+      <![CDATA[Cervical Spine Flexors]]>
+    </line>
+    <line>
+      <![CDATA[Cervical Spine Rotators]]>
+    </line>
+    <line>
+      <![CDATA[Cervical Spine Side Flexors]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\04PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\05PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\06PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\07PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\08PTWired.png' height='400' width='850'/><br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-09-07T07:54:31Z" name="Default suite" finished-at="2018-09-07T07:55:00Z" duration-ms="29166">
+  <suite started-at="2018-09-13T07:11:36Z" name="Default suite" finished-at="2018-09-13T07:12:49Z" duration-ms="73648">
     <groups>
     </groups>
-    <test started-at="2018-09-07T07:54:31Z" name="Default test" finished-at="2018-09-07T07:55:00Z" duration-ms="29166">
-      <class name="TestSuite01.TestCase03a">
-        <test-method signature="aStartBrowser()[pri:10, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:31Z" name="aStartBrowser" finished-at="2018-09-07T07:54:34Z" duration-ms="2925" status="PASS">
+    <test started-at="2018-09-13T07:11:36Z" name="Default test" finished-at="2018-09-13T07:12:49Z" duration-ms="73648">
+      <class name="TestSuite01.TestCase04a">
+        <test-method signature="aTestSummary()[pri:1, instance:TestSuite01.TestCase04a@63a12c68]" started-at="2018-09-13T07:11:36Z" name="aTestSummary" finished-at="2018-09-13T07:11:36Z" duration-ms="8" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[---------------------Browser has started----------------]]>
+              <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aStartBrowser -->
-        <test-method signature="bLogin()[pri:11, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:34Z" name="bLogin" description="This test is to verify if Login page accepts username" finished-at="2018-09-07T07:54:44Z" depends-on-methods="TestSuite01.TestCase03a.aStartBrowser" duration-ms="10234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bLogin -->
-        <test-method signature="cAddNewPatient()[pri:12, instance:TestSuite01.TestCase03a@28f3b248]" started-at="2018-09-07T07:54:44Z" name="cAddNewPatient" description="This test is to add new patient" finished-at="2018-09-07T07:55:00Z" depends-on-methods="TestSuite01.TestCase03a.bLogin" duration-ms="15976" status="PASS">
+        </test-method> <!-- aTestSummary -->
+        <test-method signature="bSelectPatient()[pri:2, instance:TestSuite01.TestCase04a@63a12c68]" started-at="2018-09-13T07:11:36Z" name="bSelectPatient" description="Login to the application and Search for a patient and select the patient" finished-at="2018-09-13T07:12:49Z" depends-on-methods="TestSuite01.TestCase04a.aTestSummary" duration-ms="73616" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\01PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[-------------Error message displayed is +actualerror_message]]>
+              <![CDATA[-----------------------Options available in dropdown are-----------------]]>
             </line>
             <line>
-              <![CDATA[-----------------------Error message is displayed correctly for first name field when left blank------------------------]]>
+              <![CDATA[Head and Neck]]>
             </line>
             <line>
-              <![CDATA[-------------Error message displayed is---Highlighted fields are invalid]]>
+              <![CDATA[Lower Extremity]]>
             </line>
             <line>
-              <![CDATA[-----------------------Error message is displayed correctly for last name field when left blank------------------------]]>
+              <![CDATA[Trunk]]>
             </line>
             <line>
-              <![CDATA[-------------Error message displayed is -----Highlighted fields are invalid]]>
+              <![CDATA[Upper Extremity]]>
             </line>
             <line>
-              <![CDATA[-----------------------Error message is displayed correctly for Date of Birth field when left blank------------------------]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\02PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[-------------Error message displayed is-------Highlighted fields are invalid]]>
+              <![CDATA[-----------------------Options available within Head and Neck are-----------------]]>
             </line>
             <line>
-              <![CDATA[-----------------------Error message is displayed correctly for Email field when left blank------------------------]]>
+              <![CDATA[Cervical Spine]]>
             </line>
             <line>
-              <![CDATA[-------------Error message displayed is---------Invalid Email]]>
+              <![CDATA[Jaw]]>
             </line>
             <line>
-              <![CDATA[-----------------------Error message is displayed correctly when email field is incorrectly populated------------------------]]>
+              <![CDATA[Vestibular]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\03PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------Options available within Cervical and Spine are-----------------]]>
+            </line>
+            <line>
+              <![CDATA[Cervical Spine Extensors]]>
+            </line>
+            <line>
+              <![CDATA[Cervical Spine Flexors]]>
+            </line>
+            <line>
+              <![CDATA[Cervical Spine Rotators]]>
+            </line>
+            <line>
+              <![CDATA[Cervical Spine Side Flexors]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\04PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\05PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\06PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\07PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\08PTWired.png' height='400' width='850'/><br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- cAddNewPatient -->
-      </class> <!-- TestSuite01.TestCase03a -->
+        </test-method> <!-- bSelectPatient -->
+      </class> <!-- TestSuite01.TestCase04a -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
