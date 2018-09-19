@@ -34,6 +34,11 @@ public class TestCase03a {
 		
 		public void aStartBrowser()
 		{
+			
+			Reporter.log("This Test case is to validate errror messages that pop up in Patient form when user fails to enter values as expected" );
+			
+			Reporter.log("------------------------------------------------------------------------------------------------");
+			
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 			
 			driver=new ChromeDriver();
@@ -42,7 +47,7 @@ public class TestCase03a {
 			
 		}
 			
-		 @Test(priority=11,dependsOnMethods="aStartBrowser",description="This test is to verify if Login page accepts username")
+		 @Test(priority=11,dependsOnMethods="aStartBrowser")
 		 
 		 public void bLogin()
 		 {
@@ -84,7 +89,7 @@ public class TestCase03a {
 			 
 		}
 
-		 @Test(priority=12,dependsOnMethods="bLogin",description="This test is to add new patient")
+		 @Test(priority=12,dependsOnMethods="bLogin")
 		 
 		 public void cAddNewPatient() throws IOException
 		 
@@ -92,9 +97,9 @@ public class TestCase03a {
 		 {
 			 WebDriverWait wait11 = new WebDriverWait(driver,40);
 			 
-			 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
+			 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")));
 			
-			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")).isEnabled());
+			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")).isEnabled());
 			 
 			 Reporter.log("-----------------------Asserted:--Add New Patient button is available in home page----------------");
 			 
@@ -102,7 +107,7 @@ public class TestCase03a {
 			 Reporter.log("                                                                                  ");
 			 Reporter.log("=====================================================================");
 			 
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")).click();
+			 driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")).click();
 			
 			 WebDriverWait wait111 = new WebDriverWait(driver,40);
 			 
@@ -225,7 +230,7 @@ public class TestCase03a {
 				//Take snapshot
 				 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-				 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatientFail\\01"+driver.getTitle()+".png");
+				 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03a\\01"+driver.getTitle()+".png");
 
 				 FileUtils.copyFile(source111, screenshotName111);
 
@@ -306,12 +311,25 @@ public class TestCase03a {
 						//Take snapshot
 					 File source1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-					 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatientFail\\02"+driver.getTitle()+".png");
+					 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03a\\02"+driver.getTitle()+".png");
 
 					 FileUtils.copyFile(source1111, screenshotName1111);
 
 					 Reporter.log("<br><img src='"+screenshotName1111+"' height='400' width='850'/><br>");
 
+						
+					 //Click on user name
+					 driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
+					
+					 //Logout
+					driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+						
+						WebDriverWait wait1=new WebDriverWait(driver,40);
+						WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
+
+					 
+						driver.quit();
+						
 		 }
 		 
 		 

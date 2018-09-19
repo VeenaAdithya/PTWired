@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -26,16 +27,16 @@ public class TestCase04a {
 	
 	WebDriver driver;
 	
-	@Test(priority=1)
+	@Test(priority=20)
 	
 	public void aTestSummary()
 	{
 		Reporter.log("This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck");	
 	}
 	
-	@Test(priority=2,dependsOnMethods="aTestSummary",description="Login to the application and Search for a patient and select the patient")
+	@Test(priority=21,dependsOnMethods="aTestSummary",description="Login to the application and Search for a patient and select the patient")
 	
-	public void bSelectPatient() throws IOException 
+	public void bSelectPatient() throws IOException, Exception 
 	{
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\veenaramakrishnan\\chromedriver.exe");
@@ -81,11 +82,11 @@ public class TestCase04a {
 			}
 	
 		 WebDriverWait wait21=new WebDriverWait(driver,40);
-		WebElement element21=wait21.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button"))));
+		WebElement element21=wait21.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button"))));
 
 		
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[3]/div/input")).click();
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[3]/div/input")).sendKeys("TestPatient06");	 
+			driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[3]/div/input")).click();
+			driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[3]/div/input")).sendKeys("TestPatient10");	 
 		 
 	
 	 try {
@@ -97,9 +98,9 @@ public class TestCase04a {
 	
 	 
 	 WebDriverWait wait211=new WebDriverWait(driver,40);
-	WebElement element211=wait211.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/a"))));
+	WebElement element211=wait211.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a"))));
 
-	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/a")).click();
+	driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a")).click();
 
 	 try {
 			Thread.sleep(4000);
@@ -173,12 +174,53 @@ public class TestCase04a {
 		
 
 		 try {
-				Thread.sleep(2000);
+				Thread.sleep(6000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		
+		
+		 //Scroll down
+		 
+		
+		 
+		 for (int second = 0;; second++) {
+			    if(second >=6){
+			        break;
+			    }
+			    
+			    JavascriptExecutor jse = (JavascriptExecutor)driver;
+			    jse.executeScript("window.scrollBy(0,400)", "");
+			    Thread.sleep(3000);
+			}
+		 
+
+
+		 try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		 
+		 //Scroll up
+		 
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("scroll(4000, 0)");
+		 
+
+		 try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		 
+		 
+		 
 		 
 		//filter
 
@@ -225,7 +267,44 @@ public class TestCase04a {
 		 //Select Cervical and spine
 		 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div[2]/ul/li[1]/a")).click();
 		 
+
+//Scroll down
 		 
+		
+		 
+		 for (int second = 0;; second++) {
+			    if(second >=6){
+			        break;
+			    }
+			    
+			    JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+			    jse1.executeScript("window.scrollBy(0,400)", "");
+			    Thread.sleep(3000);
+			}
+		 
+
+
+		 try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		 
+		 //Scroll up
+		 
+		 JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		 jse1.executeScript("scroll(4000, 0)");
+		 
+
+		 try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 		//filter
 
 			List<WebElement> list11=driver.findElements(By.xpath("//ul[@class='dropdown-menu']//li/a"));
@@ -372,6 +451,18 @@ public class TestCase04a {
 		 
 		 
 		 
+		 //Click on user name
+		 driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
+		
+		 //Logout
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+			
+			WebDriverWait wait1=new WebDriverWait(driver,40);
+			WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
+
+		 
+			driver.quit();
+			
 		 
 		 
 		 

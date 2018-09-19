@@ -29,6 +29,11 @@ public class TestCase01 {
 	
 	public void aStartBrowser()
 	{
+		
+		Reporter.log("This Test case is to verify successful log in and log out of the application");
+		
+		Reporter.log("---------------------------------------------------------------------------------");
+		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 		
 		driver=new ChromeDriver();
@@ -90,13 +95,14 @@ public class TestCase01 {
 		 //Take snapshot
 		 File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\01"+driver.getTitle()+".png");
+		 File screenshotName = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase01\\01"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source, screenshotName);
 
 
 		 Reporter.log("<br><img src='"+screenshotName+"' height='400' width='850'/><br>");
 
+		 
 		 
 	 }
 	
@@ -117,16 +123,23 @@ public class TestCase01 {
 		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div[2]/div/div[2]/form/div[3]/button")).click();
 		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		 WebDriverWait wait1 = new WebDriverWait(driver,40);
 		 
-		 WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
+		 WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")));
 		 
 		Reporter.log("--------------------------------------Log in is successful--------------------------");
 		
 		 //Take snapshot
 		 File source1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName1 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\02"+driver.getTitle()+".png");
+		 File screenshotName1 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase01\\02"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source1, screenshotName1);
 
@@ -160,7 +173,7 @@ public class TestCase01 {
 		 //Take snapshot
 		 File source11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\03"+driver.getTitle()+".png");
+		 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase01\\03"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source11, screenshotName11);
 
@@ -168,7 +181,7 @@ public class TestCase01 {
 		 Reporter.log("<br><img src='"+screenshotName11+"' height='400' width='850'/><br>");
 		
 		 //Logout
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
 		
 		WebDriverWait wait1=new WebDriverWait(driver,40);
 		WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
@@ -181,7 +194,7 @@ public class TestCase01 {
 		//Take snapshot
 		 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\loginTest1\\04"+driver.getTitle()+".png");
+		 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase01\\04"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source111, screenshotName111);
 

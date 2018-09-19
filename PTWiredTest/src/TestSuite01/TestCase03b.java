@@ -32,10 +32,15 @@ public class TestCase03b {
 
 		WebDriver driver;
 		
-		@Test(priority=10)
+		@Test(priority=13)
 		
 		public void aStartBrowser()
+
 		{
+			Reporter.log("This test case is to verify process of adding a new patient and precribing Head and neck related therapies");
+			
+			Reporter.log("-------------------------------------------------------------------------------------");
+			
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 			
 			driver=new ChromeDriver();
@@ -44,7 +49,7 @@ public class TestCase03b {
 			
 		}
 			
-		 @Test(priority=11,dependsOnMethods="aStartBrowser",description="This test is to verify if Login page accepts username")
+		 @Test(priority=14,dependsOnMethods="aStartBrowser")
 		 
 		 public void bLogin()
 		 {
@@ -79,28 +84,28 @@ public class TestCase03b {
 			 
 		}
 
-		 @Test(priority=12,dependsOnMethods="bLogin",description="This test is to add new patient")
+		 @Test(priority=15,dependsOnMethods="bLogin",description="This test is to add new patient")
 		 
-		 public void cAddNewPatienPass() throws IOException
+		 public void cTestCase03b() throws IOException
 		 
 		 
 		 {
 			 WebDriverWait wait11 = new WebDriverWait(driver,40);
 			 
-			 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
+			 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")));
 			
-			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")).isEnabled());
+			 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")).isEnabled());
 			 
 			 Reporter.log("-----------------------Asserted:--Add New Patient button is available in home page----------------");
 			 
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")).click();
+			 driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")).click();
 			 	 
 			 String Firstname;
 			 String Lastname;
 			 String DateOfBirth;
 			 String Email;
 			 
-			 File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\PTWired\\TestSuite01\\TestCase03.xlsx");
+			 File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\PTWired\\TestSuite01\\TestCase03b.xlsx");
 			 
 			 FileInputStream fis=new FileInputStream(src);
 			 
@@ -151,7 +156,7 @@ public class TestCase03b {
 			 //Take snapshot
 			 File source11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-			 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatienPass\\01"+driver.getTitle()+".png");
+			 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\01"+driver.getTitle()+".png");
 
 			 FileUtils.copyFile(source11, screenshotName11);
 
@@ -197,7 +202,7 @@ public class TestCase03b {
 			 //Take snapshot
 			 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-			 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\AddNewPatienPass\\02"+driver.getTitle()+".png");
+			 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\02"+driver.getTitle()+".png");
 
 			 FileUtils.copyFile(source111, screenshotName111);
 
@@ -227,12 +232,10 @@ public class TestCase03b {
 			 		 
 		 }
 		 
-		 @Test
-		 public void Prescribe()
+		 @Test(priority=16,dependsOnMethods="cTestCase03b")
+		 public void Prescribe() throws IOException
 		 
 		 {
-			 
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/button")).click();
 
 				try {
 					Thread.sleep(3000);
@@ -240,43 +243,219 @@ public class TestCase03b {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				 
-				 WebDriverWait wait1111 = new WebDriverWait(driver,40); 
+				WebDriverWait wait1111 = new WebDriverWait(driver,40); 
 				 WebElement element1111 = wait1111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/input")));
 				  
 				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/input")).sendKeys("Spine");
 			 
 				 try {
-						Thread.sleep(3000);
+						Thread.sleep(6000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 			
 				 WebDriverWait wait11111 = new WebDriverWait(driver,40); 
-				 WebElement element11111 = wait11111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")));
-			
-				 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")).isDisplayed());
-					  
+				 WebElement element11111 = wait11111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[3]/div/div/div/div[1]/img")));
+				 
+				 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\\\"root\\\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[3]/div/div/div/div[1]/img")).isDisplayed());
+				 Reporter.log("---------------------Search for spine returns results successfully------------------------");
+				 
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[3]/div/div/div/div[1]/img")).click();
+				 
+				 
+				 Reporter.log("Prescription1 is selected");
 				 JavascriptExecutor js = (JavascriptExecutor) driver;
-				 js.executeScript("window.scrollBy(0,100)");
+				 js.executeScript("window.scrollBy(0,300)");
 				 
 				 
 				 try {
-						Thread.sleep(3000);
+						Thread.sleep(6000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		 
+				 //Take snapshot
+				 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\03"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source111, screenshotName111);
+
+				 Reporter.log("<br><img src='"+screenshotName111+"' height='400' width='850'/><br>");
+				 
+				 
+				 //Scroll down
+				 JavascriptExecutor js1 = (JavascriptExecutor) driver;
+				 js1.executeScript("window.scrollBy(0,600)");
+				 
+				 
+				 try {
+						Thread.sleep(6000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 
+				 
+				 
 				 WebDriverWait wait111111 = new WebDriverWait(driver,40); 
-				 WebElement element111111 = wait111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")));
-			
-				 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")).isDisplayed());
+				 WebElement element111111 = wait111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[12]/div/div/div/div[1]/img")));
+				
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[12]/div/div/div/div[1]/img")).click();
+				 
+				 Reporter.log("Prescription 2 is selected");
+				 
+				 //Take snapshot
+				 File source1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\04"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source1111, screenshotName1111);
+
+				 Reporter.log("<br><img src='"+screenshotName1111+"' height='400' width='850'/><br>");
+
+				 
+				 //Scroll down
+				 JavascriptExecutor js11 = (JavascriptExecutor) driver;
+				 js11.executeScript("window.scrollBy(0,800)");
 				 
 				 
+				 try {
+						Thread.sleep(4000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 
+
+				 WebDriverWait wait1111111 = new WebDriverWait(driver,80); 
+				 WebElement element1111111 = wait1111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[62]/div/div/div/div[1]/img")));
+				
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[62]/div/div/div/div[1]/img")).click();
+				 
+				 Reporter.log("Prescription 3 is selected");
+				 //Take snapshot
+				 File source11111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName11111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\05"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source11111, screenshotName11111);
+
+				 Reporter.log("<br><img src='"+screenshotName11111+"' height='400' width='850'/><br>");
+
+				//Scroll down
+				 JavascriptExecutor js111 = (JavascriptExecutor) driver;
+				 js111.executeScript("window.scrollBy(0,2000)");
 				 
 				 
+				 try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 
+				//Take snapshot
+				 File source111111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName111111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\06"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source111111, screenshotName111111);
+
+				 Reporter.log("<br><img src='"+screenshotName111111+"' height='400' width='850'/><br>");
+				 
+				 //scroll up
+				 JavascriptExecutor js1111 = (JavascriptExecutor) driver;
+				 js1111.executeScript("window.scrollBy(3000,0)");
+				 
+				 
+				 try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+								 
+				 //filter for Head and neck
+				 
+				 WebDriverWait wait11111111 = new WebDriverWait(driver,40); 
+				 WebElement element11111111 = wait11111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/button")));
+				 
+				 
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/button")).click();
+				 try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				  
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/a")).click();
+				 
+				 try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				 WebDriverWait wait111111111 = new WebDriverWait(driver,40); 
+				 WebElement element111111111 = wait111111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img")));
+				 
+				 driver.findElement((By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div/div/div/div[1]/img"))).click();
+					
+				 Reporter.log("Prescription 4 is selected");				 
+				 
+				 //Take snapshot				 
+				 File source11111111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+				 File screenshotName11111111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase03b\\08"+driver.getTitle()+".png");
+
+				 FileUtils.copyFile(source11111111, screenshotName11111111);
+
+				 Reporter.log("<br><img src='"+screenshotName11111111+"' height='400' width='850'/><br>");
+				 
+				 try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 
+				 //click on next
+				 
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[2]/div/div[3]/button")).click();
+				 
+				 try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				//Scroll up
+				 JavascriptExecutor js11111 = (JavascriptExecutor) driver;
+				 js11111.executeScript("window.scrollBy(1000,0)");
+				 
+				 //Enter frequency
+				 WebDriverWait wait1111111111 = new WebDriverWait(driver,40); 
+				 WebElement element1111111111 = wait1111111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/form/div[1]/div[1]/div/div/input")));
+				 
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/form/div[1]/div[1]/div/div/input")).sendKeys("4");
+			 		 
+				 //Assign
+				//Scroll down
+				 JavascriptExecutor js111111 = (JavascriptExecutor) driver;
+				 js111111.executeScript("window.scrollBy(0,1000)");
+				 
+				 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/div[3]/button")).click();
+				 
+				 
+		 
 		 }
 		 
 		 

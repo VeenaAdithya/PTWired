@@ -5,7 +5,10 @@
     <classes>
        <class name="TestSuite01.TestCase01" />
        <class name="TestSuite01.TestCase02" />
-       <class name="TestSuite01.TestCase03" />
+       <class name="TestSuite01.TestCase03a" />
+       <class name="TestSuite01.TestCase03b" />
+       <class name="TestSuite01.TestCase03c" />
+       <class name="TestSuite01.TestCase04a" />
     </classes>
   </test>
 </suite>

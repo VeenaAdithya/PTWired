@@ -25,6 +25,11 @@ public class TestCase02 {
 	
 	public void aStartBrowser()
 	{
+		
+		Reporter.log("This test case is to verify change password link is available in users profile page");
+		
+		Reporter.log("------------------------------------------------------------------------------");
+		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 		
 		driver=new ChromeDriver();
@@ -67,7 +72,7 @@ public class TestCase02 {
 		
 		 WebDriverWait wait11 = new WebDriverWait(driver,40);
 		 
-		 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div[1]/div[2]/div/a/button")));
+		 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[2]/div/a/button")));
 		
 		 Reporter.log("---------------------Login is successful--------------------");
 	}
@@ -85,14 +90,14 @@ public class TestCase02 {
 		 //Take snapshot
 		 File source11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\ChangePassword1\\03"+driver.getTitle()+".png");
+		 File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase02\\03"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source11, screenshotName11);
 
 
 		 Reporter.log("<br><img src='"+screenshotName11+"' height='400' width='850'/><br>");
 
-		 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/ul/a[2]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/a[2]")).click();
 	 
 	    WebDriverWait wait1 = new WebDriverWait(driver,40);
 		WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/a"))));
@@ -100,7 +105,7 @@ public class TestCase02 {
 	//Take snapshot
 	 File source111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-	 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\ChangePassword1\\04"+driver.getTitle()+".png");
+	 File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase02\\04"+driver.getTitle()+".png");
 
 	 FileUtils.copyFile(source111, screenshotName111);
 
@@ -131,7 +136,7 @@ public class TestCase02 {
 		//Take snapshot
 		 File source1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\ChangePassword1\\05"+driver.getTitle()+".png");
+		 File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\git\\PTWired\\PTWiredTest\\Screenshots\\TestCase02\\05"+driver.getTitle()+".png");
 
 		 FileUtils.copyFile(source1111, screenshotName1111);
 
@@ -156,7 +161,7 @@ public class TestCase02 {
 			driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
 			
 			 //Logout
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
 
 			WebDriverWait wait11=new WebDriverWait(driver,40);
 			WebElement element11=wait11.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));

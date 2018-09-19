@@ -1,159 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
+      <![CDATA[This test case is to add a new patient, and clicking on save; then searching for the patient and continue to prescribe head and neck related therapy]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\01PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[-------------------------------------------------------------------------------------]]>
     </line>
     <line>
-      <![CDATA[-----------------------Options available in dropdown are-----------------]]>
+      <![CDATA[---------------------Browser has started----------------]]>
     </line>
     <line>
-      <![CDATA[Head and Neck]]>
+      <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
     </line>
     <line>
-      <![CDATA[Lower Extremity]]>
+      <![CDATA[-----------------------------Asserted:--Save button is enabled--------------------------]]>
     </line>
     <line>
-      <![CDATA[Trunk]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\01PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[Upper Extremity]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\02PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\02PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[---------------------------Patient is successfully added------------------------------]]>
     </line>
     <line>
-      <![CDATA[-----------------------Options available within Head and Neck are-----------------]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\02aPTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[Cervical Spine]]>
+      <![CDATA[Prescription 1 is selected]]>
     </line>
     <line>
-      <![CDATA[Jaw]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\03PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[Vestibular]]>
+      <![CDATA[Prescription 2 is selected]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\03PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\04PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[-----------------------Options available within Cervical and Spine are-----------------]]>
+      <![CDATA[Prescription 3 is selected]]>
     </line>
     <line>
-      <![CDATA[Cervical Spine Extensors]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\05PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[Cervical Spine Flexors]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\06PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[Cervical Spine Rotators]]>
+      <![CDATA[Prescription 4 is selected]]>
     </line>
     <line>
-      <![CDATA[Cervical Spine Side Flexors]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\08PTWired.png' height='400' width='850'/><br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\04PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\05PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\06PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\07PTWired.png' height='400' width='850'/><br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\08PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\09PTWired.png' height='400' width='850'/><br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-09-13T07:11:36Z" name="Default suite" finished-at="2018-09-13T07:12:49Z" duration-ms="73648">
+  <suite started-at="2018-09-19T07:16:19Z" name="Default suite" finished-at="2018-09-19T07:17:51Z" duration-ms="91834">
     <groups>
     </groups>
-    <test started-at="2018-09-13T07:11:36Z" name="Default test" finished-at="2018-09-13T07:12:49Z" duration-ms="73648">
-      <class name="TestSuite01.TestCase04a">
-        <test-method signature="aTestSummary()[pri:1, instance:TestSuite01.TestCase04a@63a12c68]" started-at="2018-09-13T07:11:36Z" name="aTestSummary" finished-at="2018-09-13T07:11:36Z" duration-ms="8" status="PASS">
+    <test started-at="2018-09-19T07:16:19Z" name="Default test" finished-at="2018-09-19T07:17:51Z" duration-ms="91834">
+      <class name="TestSuite01.TestCase03c">
+        <test-method signature="aStartBrowser()[pri:17, instance:TestSuite01.TestCase03c@28f3b248]" started-at="2018-09-19T07:16:19Z" name="aStartBrowser" finished-at="2018-09-19T07:16:22Z" duration-ms="2845" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
+              <![CDATA[This test case is to add a new patient, and clicking on save; then searching for the patient and continue to prescribe head and neck related therapy]]>
+            </line>
+            <line>
+              <![CDATA[-------------------------------------------------------------------------------------]]>
+            </line>
+            <line>
+              <![CDATA[---------------------Browser has started----------------]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aTestSummary -->
-        <test-method signature="bSelectPatient()[pri:2, instance:TestSuite01.TestCase04a@63a12c68]" started-at="2018-09-13T07:11:36Z" name="bSelectPatient" description="Login to the application and Search for a patient and select the patient" finished-at="2018-09-13T07:12:49Z" depends-on-methods="TestSuite01.TestCase04a.aTestSummary" duration-ms="73616" status="PASS">
+        </test-method> <!-- aStartBrowser -->
+        <test-method signature="bLogin()[pri:18, instance:TestSuite01.TestCase03c@28f3b248]" started-at="2018-09-19T07:16:22Z" name="bLogin" description="This test is to verify if Login page accepts username" finished-at="2018-09-19T07:16:27Z" depends-on-methods="TestSuite01.TestCase03c.aStartBrowser" duration-ms="5481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bLogin -->
+        <test-method signature="cTestCase03c()[pri:19, instance:TestSuite01.TestCase03c@28f3b248]" started-at="2018-09-19T07:16:27Z" name="cTestCase03c" description="This test is to add new patient" finished-at="2018-09-19T07:17:51Z" depends-on-methods="TestSuite01.TestCase03c.bLogin" duration-ms="83483" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\01PTWired.png' height='400' width='850'/><br>]]>
+              <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
             </line>
             <line>
-              <![CDATA[-----------------------Options available in dropdown are-----------------]]>
+              <![CDATA[-----------------------------Asserted:--Save button is enabled--------------------------]]>
             </line>
             <line>
-              <![CDATA[Head and Neck]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\01PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Lower Extremity]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\02PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Trunk]]>
+              <![CDATA[---------------------------Patient is successfully added------------------------------]]>
             </line>
             <line>
-              <![CDATA[Upper Extremity]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\02aPTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\02PTWired.png' height='400' width='850'/><br>]]>
+              <![CDATA[Prescription 1 is selected]]>
             </line>
             <line>
-              <![CDATA[-----------------------Options available within Head and Neck are-----------------]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\03PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Cervical Spine]]>
+              <![CDATA[Prescription 2 is selected]]>
             </line>
             <line>
-              <![CDATA[Jaw]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\04PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Vestibular]]>
+              <![CDATA[Prescription 3 is selected]]>
             </line>
             <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\03PTWired.png' height='400' width='850'/><br>]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\05PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[-----------------------Options available within Cervical and Spine are-----------------]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\06PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Cervical Spine Extensors]]>
+              <![CDATA[Prescription 4 is selected]]>
             </line>
             <line>
-              <![CDATA[Cervical Spine Flexors]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\08PTWired.png' height='400' width='850'/><br>]]>
             </line>
             <line>
-              <![CDATA[Cervical Spine Rotators]]>
-            </line>
-            <line>
-              <![CDATA[Cervical Spine Side Flexors]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\04PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\05PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\06PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\07PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\VerifyLinks\08PTWired.png' height='400' width='850'/><br>]]>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase03c\09PTWired.png' height='400' width='850'/><br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- bSelectPatient -->
-      </class> <!-- TestSuite01.TestCase04a -->
+        </test-method> <!-- cTestCase03c -->
+      </class> <!-- TestSuite01.TestCase03c -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
