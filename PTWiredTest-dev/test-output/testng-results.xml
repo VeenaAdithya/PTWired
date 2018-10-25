@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[This Test case is to ensure email validation is accurate in Add patient form]]>
+    </line>
+    <line>
+      <![CDATA[------------------------------------------------------------------------------------------------]]>
+    </line>
+    <line>
+      <![CDATA[---------------------Browser has started----------------]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
+    </line>
+    <line>
+      <![CDATA[                                                                                  ]]>
+    </line>
+    <line>
+      <![CDATA[                                                                                  ]]>
+    </line>
+    <line>
+      <![CDATA[=====================================================================]]>
+    </line>
+    <line>
+      <![CDATA[-------------Error message displayed is---------Email must be unique]]>
+    </line>
+    <line>
+      <![CDATA[                                                                                  ]]>
+    </line>
+    <line>
+      <![CDATA[--------------Asserted:--Email is validated and doesnot allow me to add an existing patient------------------------]]>
+    </line>
+    <line>
+      <![CDATA[                                                                                  ]]>
+    </line>
+    <line>
+      <![CDATA[                                                                                  ]]>
+    </line>
+    <line>
+      <![CDATA[=====================================================================]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase06\02PTWired.png' height='400' width='850'/><br>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2018-10-25T08:02:42Z" name="Default suite" finished-at="2018-10-25T08:03:13Z" duration-ms="31196">
+    <groups>
+    </groups>
+    <test started-at="2018-10-25T08:02:42Z" name="Default test" finished-at="2018-10-25T08:03:13Z" duration-ms="31196">
+      <class name="TestSuite01.gPatientFormEmailValidation">
+        <test-method signature="aStartBrowser()[pri:10, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:42Z" name="aStartBrowser" finished-at="2018-10-25T08:02:45Z" duration-ms="3107" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[This Test case is to ensure email validation is accurate in Add patient form]]>
+            </line>
+            <line>
+              <![CDATA[------------------------------------------------------------------------------------------------]]>
+            </line>
+            <line>
+              <![CDATA[---------------------Browser has started----------------]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- aStartBrowser -->
+        <test-method signature="bLogin()[pri:11, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:45Z" name="bLogin" finished-at="2018-10-25T08:02:55Z" depends-on-methods="TestSuite01.gPatientFormEmailValidation.aStartBrowser" duration-ms="9308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bLogin -->
+        <test-method signature="cAddNewPatient()[pri:12, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:55Z" name="cAddNewPatient" finished-at="2018-10-25T08:03:13Z" depends-on-methods="TestSuite01.gPatientFormEmailValidation.bLogin" duration-ms="18748" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
+            </line>
+            <line>
+              <![CDATA[                                                                                  ]]>
+            </line>
+            <line>
+              <![CDATA[                                                                                  ]]>
+            </line>
+            <line>
+              <![CDATA[=====================================================================]]>
+            </line>
+            <line>
+              <![CDATA[-------------Error message displayed is---------Email must be unique]]>
+            </line>
+            <line>
+              <![CDATA[                                                                                  ]]>
+            </line>
+            <line>
+              <![CDATA[--------------Asserted:--Email is validated and doesnot allow me to add an existing patient------------------------]]>
+            </line>
+            <line>
+              <![CDATA[                                                                                  ]]>
+            </line>
+            <line>
+              <![CDATA[                                                                                  ]]>
+            </line>
+            <line>
+              <![CDATA[=====================================================================]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase06\02PTWired.png' height='400' width='850'/><br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cAddNewPatient -->
+      </class> <!-- TestSuite01.gPatientFormEmailValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
