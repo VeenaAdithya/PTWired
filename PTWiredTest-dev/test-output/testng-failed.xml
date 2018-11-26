@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestSuite01.aTestLoginLogout">
+      <class name="TestSuite01.fTestHeadAndNeckFilterOptions">
         <methods>
-          <include name="cPasswordInputField"/>
-          <include name="bEmailInputField"/>
-          <include name="dLoginButton"/>
-          <include name="eLogout"/>
-          <include name="aStartBrowser"/>
+          <include name="aTestSummary"/>
+          <include name="bSelectPatient"/>
         </methods>
-      </class> <!-- TestSuite01.aTestLoginLogout -->
+      </class> <!-- TestSuite01.fTestHeadAndNeckFilterOptions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

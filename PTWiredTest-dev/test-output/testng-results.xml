@@ -1,109 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[This Test case is to ensure email validation is accurate in Add patient form]]>
-    </line>
-    <line>
-      <![CDATA[------------------------------------------------------------------------------------------------]]>
-    </line>
-    <line>
-      <![CDATA[---------------------Browser has started----------------]]>
-    </line>
-    <line>
-      <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
-    </line>
-    <line>
-      <![CDATA[                                                                                  ]]>
-    </line>
-    <line>
-      <![CDATA[                                                                                  ]]>
-    </line>
-    <line>
-      <![CDATA[=====================================================================]]>
-    </line>
-    <line>
-      <![CDATA[-------------Error message displayed is---------Email must be unique]]>
-    </line>
-    <line>
-      <![CDATA[                                                                                  ]]>
-    </line>
-    <line>
-      <![CDATA[--------------Asserted:--Email is validated and doesnot allow me to add an existing patient------------------------]]>
-    </line>
-    <line>
-      <![CDATA[                                                                                  ]]>
-    </line>
-    <line>
-      <![CDATA[                                                                                  ]]>
-    </line>
-    <line>
-      <![CDATA[=====================================================================]]>
-    </line>
-    <line>
-      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase06\02PTWired.png' height='400' width='850'/><br>]]>
+      <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-10-25T08:02:42Z" name="Default suite" finished-at="2018-10-25T08:03:13Z" duration-ms="31196">
+  <suite started-at="2018-11-26T06:09:09Z" name="Default suite" finished-at="2018-11-26T06:09:39Z" duration-ms="30085">
     <groups>
     </groups>
-    <test started-at="2018-10-25T08:02:42Z" name="Default test" finished-at="2018-10-25T08:03:13Z" duration-ms="31196">
-      <class name="TestSuite01.gPatientFormEmailValidation">
-        <test-method signature="aStartBrowser()[pri:10, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:42Z" name="aStartBrowser" finished-at="2018-10-25T08:02:45Z" duration-ms="3107" status="PASS">
+    <test started-at="2018-11-26T06:09:09Z" name="Default test" finished-at="2018-11-26T06:09:39Z" duration-ms="30085">
+      <class name="TestSuite01.fTestHeadAndNeckFilterOptions">
+        <test-method signature="bSelectPatient()[pri:21, instance:TestSuite01.fTestHeadAndNeckFilterOptions@63a12c68]" started-at="2018-11-26T06:09:09Z" name="bSelectPatient" description="Login to the application and Search for a patient and select the patient" finished-at="2018-11-26T06:09:39Z" depends-on-methods="TestSuite01.fTestHeadAndNeckFilterOptions.aTestSummary" duration-ms="30063" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="pt-tab-layout-pane-1"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a"}
+  (Session info: chrome=70.0.3538.102)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:03.216Z'
+System info: host: 'DESKTOP-7PUP5K7', ip: '192.168.43.157', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\VEENAR~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.102, webStorageEnabled: true}
+Session ID: 4f31fa07cdc56a8f8617e81c646abd27
+*** Element info: {Using=xpath, value=//*[@id="pt-tab-layout-pane-1"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="pt-tab-layout-pane-1"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a"}
+  (Session info: chrome=70.0.3538.102)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:03.216Z'
+System info: host: 'DESKTOP-7PUP5K7', ip: '192.168.43.157', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\VEENAR~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.102, webStorageEnabled: true}
+Session ID: 4f31fa07cdc56a8f8617e81c646abd27
+*** Element info: {Using=xpath, value=//*[@id="pt-tab-layout-pane-1"]/div/div/div/div[2]/div/div/div/div[2]/div[1]/a}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+at TestSuite01.fTestHeadAndNeckFilterOptions.bSelectPatient(fTestHeadAndNeckFilterOptions.java:101)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bSelectPatient -->
+        <test-method signature="aTestSummary()[pri:20, instance:TestSuite01.fTestHeadAndNeckFilterOptions@63a12c68]" started-at="2018-11-26T06:09:09Z" name="aTestSummary" finished-at="2018-11-26T06:09:09Z" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[This Test case is to ensure email validation is accurate in Add patient form]]>
-            </line>
-            <line>
-              <![CDATA[------------------------------------------------------------------------------------------------]]>
-            </line>
-            <line>
-              <![CDATA[---------------------Browser has started----------------]]>
+              <![CDATA[This Test case is to search for a patient, click on the patient name and verify filter options available, and ensure all filters and end results work for the option Head and Neck]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aStartBrowser -->
-        <test-method signature="bLogin()[pri:11, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:45Z" name="bLogin" finished-at="2018-10-25T08:02:55Z" depends-on-methods="TestSuite01.gPatientFormEmailValidation.aStartBrowser" duration-ms="9308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bLogin -->
-        <test-method signature="cAddNewPatient()[pri:12, instance:TestSuite01.gPatientFormEmailValidation@28f3b248]" started-at="2018-10-25T08:02:55Z" name="cAddNewPatient" finished-at="2018-10-25T08:03:13Z" depends-on-methods="TestSuite01.gPatientFormEmailValidation.bLogin" duration-ms="18748" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[-----------------------Asserted:--Add New Patient button is available in home page----------------]]>
-            </line>
-            <line>
-              <![CDATA[                                                                                  ]]>
-            </line>
-            <line>
-              <![CDATA[                                                                                  ]]>
-            </line>
-            <line>
-              <![CDATA[=====================================================================]]>
-            </line>
-            <line>
-              <![CDATA[-------------Error message displayed is---------Email must be unique]]>
-            </line>
-            <line>
-              <![CDATA[                                                                                  ]]>
-            </line>
-            <line>
-              <![CDATA[--------------Asserted:--Email is validated and doesnot allow me to add an existing patient------------------------]]>
-            </line>
-            <line>
-              <![CDATA[                                                                                  ]]>
-            </line>
-            <line>
-              <![CDATA[                                                                                  ]]>
-            </line>
-            <line>
-              <![CDATA[=====================================================================]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\git\PTWired\PTWiredTest\Screenshots\TestCase06\02PTWired.png' height='400' width='850'/><br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- cAddNewPatient -->
-      </class> <!-- TestSuite01.gPatientFormEmailValidation -->
+        </test-method> <!-- aTestSummary -->
+      </class> <!-- TestSuite01.fTestHeadAndNeckFilterOptions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

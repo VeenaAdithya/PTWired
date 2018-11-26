@@ -101,7 +101,7 @@ public class eSaveAndSearchAndAddPrescription {
 			 	 
 			 String Firstname;
 			 String Lastname;
-			 String DateOfBirth;
+		
 			 String Email;
 			 
 			 File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\PTWired\\TestSuite01\\TestCase03c.xlsx");
@@ -116,25 +116,21 @@ public class eSaveAndSearchAndAddPrescription {
 			 
 			XSSFRow row1=sheet1.getRow(4);
 			XSSFCell cell2=row1.getCell(1);
-			 
-			XSSFRow row2=sheet1.getRow(5);
-			XSSFCell cell3=row2.getCell(1);
-			 
+			 	 
 			XSSFRow row3=sheet1.getRow(6);
 			XSSFCell cell4=row3.getCell(1);
 
 			Firstname=cell1.toString();
 			Lastname=cell2.toString();
-			DateOfBirth=cell3.toString();
+		
 			Email=cell4.toString();
 			
 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).sendKeys(Firstname);
 			
 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).sendKeys(Lastname);
 			
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys(DateOfBirth);
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys(Email);
 			 
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).sendKeys(Email);
 			 
 			 try {
 					Thread.sleep(2000);

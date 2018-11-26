@@ -114,7 +114,7 @@ public class gPatientFormEmailValidation {
 			
 			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).sendKeys("FirstName");
 			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).sendKeys("LastName");
-			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys("01-01-1985");
+			 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys("testpatient11@example.com");
 			 
 
 			 try {
@@ -123,15 +123,8 @@ public class gPatientFormEmailValidation {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).sendKeys("testpatient11@example.com");
-			 			try {
-							Thread.sleep(2000);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 			 			
-			 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/button[2]")).click();
+			 			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).click();
 			 			try {
 							Thread.sleep(4000);
 						} catch (InterruptedException e) {
@@ -139,7 +132,7 @@ public class gPatientFormEmailValidation {
 							e.printStackTrace();
 						}
 						
-			 			String actualerror_message11111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/span[2]")).getAttribute("innerHTML");
+			 			String actualerror_message11111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div/div/span[2]")).getAttribute("innerHTML");
 						
 					 	Reporter.log("-------------Error message displayed is---------"+actualerror_message11111);
 					 	Reporter.log("                                                                                  ");
@@ -165,17 +158,39 @@ public class gPatientFormEmailValidation {
 					 Reporter.log("<br><img src='"+screenshotName1111+"' height='400' width='850'/><br>");
 
 						
+					 try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+					 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/div/a/button")).click();
+					 
+					 try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div/div[3]/button[1]")).click();
+						try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}	
 //					 //Click on user name
-//					 driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
-//					
-//					 //Logout
-//					driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
+					 driver.findElement(By.xpath("//*[@id=\"bg-nested-dropdown\"]")).click();
+					
+					 //Logout
+					driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/ul/div/a")).click();
 //						
-//						WebDriverWait wait1=new WebDriverWait(driver,40);
-//						WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
+						WebDriverWait wait1=new WebDriverWait(driver,40);
+						WebElement element1=wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/h4"))));
 //
 //					 
-//						driver.quit();
+						driver.quit();
 						
 		 }
 		 

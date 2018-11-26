@@ -172,7 +172,7 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 			
 			Reporter.log("=====================================================================");
 			
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).click();
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div/div/input")).click();
 			
 			 
 			 try {
@@ -182,26 +182,7 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 					e.printStackTrace();
 				}
 			 
-			 Reporter.log("----------------Test when Date field is left blank-------------------");
-			 Reporter.log("                                                                                  ");
-			String actualerror_message11=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/span[2]")).getAttribute("innerHTML");
-			
-			Reporter.log("-------------Error message displayed is -----"+actualerror_message11);
-			Reporter.log("                                                                                  ");
-			
-			String expectederror_message11="Highlighted fields are invalid";
-			
-			Assert.assertEquals(actualerror_message11, expectederror_message11);
-			
-			Reporter.log("-------------------Asserted:--Error message is displayed correctly for Date of Birth field when left blank------------------------");
-		
-			Reporter.log("                                                                                  ");
-			
-			Reporter.log("                                                                                  ");
-			
-			Reporter.log("=====================================================================");
-			
-			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).click();
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).click();
 			 
 			 
 			 	try {
@@ -213,7 +194,7 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 			 	
 			 	Reporter.log("----------------Test when Email field is left blank-------------------");
 			 	Reporter.log("                                                                                  ");
-			 	String actualerror_message111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/span[2]")).getAttribute("innerHTML");
+			 	String actualerror_message111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div/div/span[2]")).getAttribute("innerHTML");
 			 	
 			 	Reporter.log("-------------Error message displayed is-------" +actualerror_message111);
 			 	Reporter.log("                                                                                  ");
@@ -246,9 +227,9 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 				Reporter.log("----------------Test when Email field is incorrectly populated-------------------");
 				Reporter.log("                                                                                  ");
 				
-				driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/input")).sendKeys("dummyemail");
+				driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div/div/input")).sendKeys("dummyemail");
 				
-				driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[1]/div/input")).click();
+				driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[1]/div[2]/div/input")).click();
 				
 
 				 try {
@@ -258,7 +239,7 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 						e.printStackTrace();
 					}
 				 
-				 	String actualerror_message1111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/div/span[2]")).getAttribute("innerHTML");
+				 	String actualerror_message1111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div/div/span[2]")).getAttribute("innerHTML");
 					
 				 	Reporter.log("-------------Error message displayed is---------"+actualerror_message1111);
 				
@@ -280,33 +261,6 @@ public class cFailAddPrescriptionForm_ErrorMessages {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-					
-
-					 Reporter.log("----------------Test when Date field is incorrectly populated-------------------"); 
-					 Reporter.log("                                                                                  ");
-					 driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/input")).sendKeys("31-12-2001");
-					 
-					 try {
-							Thread.sleep(2000);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					 
-					 	String actualerror_message11111=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]/div/span[2]")).getAttribute("innerHTML");
-						
-					 	Reporter.log("-------------Error message displayed is---------"+actualerror_message11111);
-					 	Reporter.log("                                                                                  ");
-					 	
-					 	String expectederror_message11111="Invalid date";
-						
-						Assert.assertEquals(actualerror_message11111, expectederror_message11111);
-						
-						Reporter.log("--------------Asserted:--Error message is displayed correctly when date field is incorrectly populated------------------------");
-						Reporter.log("                                                                                  ");
-						Reporter.log("                                                                                  ");
-					
-						Reporter.log("=====================================================================");
 						
 						//Take snapshot
 					 File source1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

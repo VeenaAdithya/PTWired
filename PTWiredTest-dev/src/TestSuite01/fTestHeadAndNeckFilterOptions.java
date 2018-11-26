@@ -86,7 +86,7 @@ public class fTestHeadAndNeckFilterOptions {
 
 		
 			driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[3]/div/input")).click();
-			driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[3]/div/input")).sendKeys("TestPatient10");	 
+			driver.findElement(By.xpath("//*[@id=\"pt-tab-layout-pane-1\"]/div/div/div/div[1]/div[3]/div/input")).sendKeys("testpatient04@gmail.com");	 
 		 
 	
 	 try {
